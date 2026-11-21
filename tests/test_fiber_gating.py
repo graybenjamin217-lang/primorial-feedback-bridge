@@ -36,10 +36,11 @@ def test_daleckii_krein_derivative_and_quadratic_suppression() -> None:
     c_3 = build_prime_channel(k=3, p=3)
     raw = rng.standard_normal(c_3.shape)
     h_sym = 0.5 * (raw + raw.T)
+    h_sym /= np.linalg.norm(h_sym, ord=2)
 
     exact_df = daleckii_krein_prime_channel(c_3, h_sym)
     fd_df = finite_diff_frechet(c_3, h_sym, eps=1e-5)
-    assert np.max(np.abs(exact_df - fd_df)) < 1e-9
+    assert np.max(np.abs(exact_df - fd_df)) < 1e-10
 
     # Project h_sym onto the commutant of C_tilde_3: D Omega_G^odd(C_3)[H_comm] = 0.
     h_comm = h_sym - exact_df
