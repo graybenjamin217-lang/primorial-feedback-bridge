@@ -93,7 +93,7 @@ def gauge_equivalence_check(
     l_k = math.log(nk)
     mu = np.linalg.eigvalsh(t_herm)
 
-    y = np.linspace(0.0, l_k, n_grid, endpoint=False)
+    y = (np.arange(n_grid, dtype=np.float64) + 0.5) * (l_k / n_grid)
     coeffs = np.fft.fft(eps_func(y)) / n_grid
     eps_bar = float(np.real(coeffs[0]))
 
@@ -112,7 +112,9 @@ def gauge_equivalence_check(
         h_var = diag_momentum + mu_a * toeplitz_eps
         eigs_var = np.linalg.eigvalsh(h_var)
         eigs_const = np.sort((2.0 * np.pi / l_k) * m_vals + eps_bar * mu_a)
-        err = float(np.max(np.abs(eigs_var[inner_lo:inner_hi] - eigs_const[inner_lo:inner_hi])))
+        err = float(
+            np.max(np.abs(eigs_var[inner_lo:inner_hi] - eigs_const[inner_lo:inner_hi]))
+        )
         if err > max_spec_diff:
             max_spec_diff = err
 
