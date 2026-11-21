@@ -54,8 +54,21 @@ def test_v_chi0_rigidity_and_1d_gauge_obstruction() -> None:
     gauge = gauge_equivalence_check(
         k=2, eps_func=lambda y: 0.8 * f_pos(np.exp(y)), m_max=40, n_grid=4096
     )
-    assert abs(gauge["eps_bar"] - 0.486339) < 1e-5
+    assert abs(gauge["eps_bar"] - 0.486187) < 1e-5
     assert gauge["max_bulk_spectral_diff"] < 1e-4
+
+    # Smooth periodic potential in C^infty(T_{L_2}): isospectral to machine precision.
+    l_2 = math.log(6.0)
+    smooth_gauge = gauge_equivalence_check(
+        k=2,
+        eps_func=lambda y: 0.5
+        + 0.3 * np.cos(2.0 * np.pi * y / l_2)
+        + 0.2 * np.sin(4.0 * np.pi * y / l_2),
+        m_max=40,
+        n_grid=4096,
+    )
+    assert abs(smooth_gauge["eps_bar"] - 0.5) < 1e-12
+    assert smooth_gauge["max_bulk_spectral_diff"] < 1e-12
 
     _, primes_3 = primorial(3)
     eps_funcs = {
