@@ -24,9 +24,14 @@ python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
 ```
+
 ## License
 
 This project uses dual licensing to distinguish between executable code and written research materials:
 
 - **Source Code & Verification Suite (this repository):** Licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0) (see the [`LICENSE`](./LICENSE) file for full terms). Permitted for noncommercial use, academic research, and personal study. For commercial licensing inquiries, contact Benjamin Edward Gray at `graybenjamin217@gmail.com`.
 - **Manuscript & Accompanying Documentation:** *The Primorial–Feedback Bridge* preprint and written documentation are © 2026 Benjamin Edward Gray and licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
+
+## Citation
+
+Gray, B. E. (2026). The Primorial–Feedback Bridge: Super-Gaussian Resolvent Lifting, Spectral Counting, and Fredholm-Module Compression for the Primorial-Modulated Dilation Operator. Zenodo. https://doi.org/10.5281/zenodo.24507932
