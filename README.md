@@ -15,7 +15,7 @@ This repository couples the variable-exponent feedback operators $\hat{\Omega}_G
 | `fiber_gating.py` | Sec. III (Thm 3.1–3.2) | Prime-channel fixed points, Daleckii–Krein derivative, $U_g$ intertwining, basin partitions (Tables 1–2) |
 | `resolvent_counting.py` | Sec. IV (Thm 4.1–4.2) | Super-Gaussian lift $(I + \tau D_k^2)^{-\tau D_k^2}$ and trace-norm spectral counting $N_{D_k}(\tau^{-1/2})$ (Table 3) |
 | `fredholm.py` | Sec. V (Thm 5.1) | Doubly-exponential Schatten acceleration $2^{n+1}$, defect convergence, finite-rank commutator compression |
-| `synthesis_obstructions.py` | Sec. VI (Prop 6.1–6.2) | Closed-form $\exp(\alpha \tilde{C}_p)$, 4th-order BCH entry, $V_{\chi_0}$ rigidity, 1D gauge equivalence & Wilson loop (Table 4) |
+| `synthesis_obstructions.py` | Sec. VI (Cor 6.1–6.2) | Closed-form $\exp(\alpha \tilde{C}_p)$, 4th-order BCH entry, $V_{\chi_0}$ rigidity, 1D gauge equivalence & Wilson loop (Table 4) |
 
 ## Quickstart
 
