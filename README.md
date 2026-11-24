@@ -15,7 +15,7 @@ This repository couples the variable-exponent feedback operators $\hat{\Omega}_G
 | `fiber_gating.py` | Sec. III (Thm 3.1–3.2) | Prime-channel fixed points, Daleckii–Krein derivative, $U_g$ intertwining, basin partitions (Tables 1–2) |
 | `resolvent_counting.py` | Sec. IV (Thm 4.1–4.2) | Super-Gaussian lift $(I + \tau D_k^2)^{-\tau D_k^2}$ and trace-norm spectral counting $N_{D_k}(\tau^{-1/2})$ (Table 3) |
 | `fredholm.py` | Sec. V (Thm 5.1) | Doubly-exponential Schatten acceleration $2^{n+1}$, defect convergence, finite-rank commutator compression |
-| `synthesis_obstructions.py` | Sec. VI (Cor 6.1–6.2) | Closed-form $\exp(\alpha \tilde{C}_p)$, 4th-order BCH entry, $V_{\chi_0}$ rigidity, 1D gauge equivalence & Wilson loop (Table 4) |
+| `synthesis_obstructions.py` | Sec. VI (Prop 6.1, Cor 6.2) | Closed-form $\exp(\alpha \tilde{C}_p)$, 4th-order BCH entry, $V_{\chi_0}$ rigidity, 1D gauge equivalence & Wilson loop (Table 4) |
 
 ## Quickstart
 
@@ -23,3 +23,10 @@ This repository couples the variable-exponent feedback operators $\hat{\Omega}_G
 python -m venv .venv
 source .venv/bin/activate  # On Windows: .venv\Scripts\activate
 pip install -e ".[dev]"
+```
+## License
+
+This project uses dual licensing to distinguish between executable code and written research materials:
+
+- **Source Code & Verification Suite (this repository):** Licensed under the [PolyForm Noncommercial License 1.0.0](https://polyformproject.org/licenses/noncommercial/1.0.0) (see the [`LICENSE`](./LICENSE) file for full terms). Permitted for noncommercial use, academic research, and personal study. For commercial licensing inquiries, contact Benjamin Edward Gray at `graybenjamin217@gmail.com`.
+- **Manuscript & Accompanying Documentation:** *The Primorial–Feedback Bridge* preprint and written documentation are © 2026 Benjamin Edward Gray and licensed under the [Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/) license.
